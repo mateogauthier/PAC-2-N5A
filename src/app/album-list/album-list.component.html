@@ -1,0 +1,30 @@
+<!-- album-list.component.html -->
+<div class="container">
+    <h1 class="title">Albums</h1>
+  
+    <nz-list
+      [nzDataSource]="albums"
+      [nzRenderItem]="item"
+    >
+      <ng-template #item let-item>
+        <nz-list-item>
+          <h3>{{ item.title }}</h3>
+          <p><strong>User ID:</strong> {{ item.userId }}</p>
+          <button nz-button (click)="togglePhotos(item.id)">
+            {{ showPhotos[item.id] ? 'Hide Photos' : 'Show Photos' }}
+          </button>
+          <nz-collapse>
+            <nz-collapse-panel
+              *ngFor="let photo of photos[item.id]"
+              [nzHeader]="photo.title"
+              [nzShowArrow]="false"
+              [nzActive]="showPhotos[item.id]"
+            >
+              <img [src]="photo.url" alt="{{ photo.title }}" class="album-photo" />
+            </nz-collapse-panel>
+          </nz-collapse>
+        </nz-list-item>
+      </ng-template>
+    </nz-list>
+  </div>
+  

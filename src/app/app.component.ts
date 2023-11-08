@@ -1,9 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { NzMessageService } from 'ng-zorro-antd/message';
-import { NzNotificationService } from 'ng-zorro-antd/notification';
-import { NzListModule } from 'ng-zorro-antd/list';
-import { NzButtonModule } from 'ng-zorro-antd/button';
-import { NzCollapseModule } from 'ng-zorro-antd/collapse';
 
 import { HttpClient } from '@angular/common/http';
 @Component({
