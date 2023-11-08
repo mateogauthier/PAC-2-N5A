@@ -1,0 +1,31 @@
+
+.grid-header {
+    display: flex;
+    align-items: center;
+    background-color: #f0f0f0;
+    padding: 8px;
+    border-bottom: 1px solid #ccc;
+    font-weight: bold;
+  }
+  
+  .grid-item {
+    flex: 1;
+    padding: 8px;
+    text-align: center;
+  }
+  
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .title {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  nz-list {
+    margin-top: 20px;
+  }
+  
