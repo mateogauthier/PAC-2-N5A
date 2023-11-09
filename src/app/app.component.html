@@ -1,11 +1,11 @@
 
-<!-- <nav>
+<nav>
   <ul>
     <li><a routerLink="/posts">Posts</a></li>
     <li><a routerLink="/albums">Albums</a></li>
   </ul>
 </nav>
-<router-outlet></router-outlet>  -->
+<router-outlet></router-outlet>
 
 <div class="container">
   <h1 class="title">Posts</h1>
@@ -29,12 +29,11 @@
         </button>
         <nz-collapse>
           <nz-collapse-panel
-            *ngFor="let comment of comments[item.id]"
-            [nzHeader]="'Comment: ' + comment.name"
+            *ngIf="showComments[item.id]"
+            [nzHeader]="'Comments'"
             [nzShowArrow]="false"
-            [nzActive]="showComments[item.id]"
           >
-            <p>{{ comment.body }}</p>
+            <p *ngFor="let comment of comments">{{ comment.body }}</p>
           </nz-collapse-panel>
         </nz-collapse>
       </nz-list-item>
